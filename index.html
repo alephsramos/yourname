@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="background"></div>
+
+    <nav class="animate animate-fade-up">
+        <p>
+            MOVIE<br>
+            RECOMMENDATIONS<br>
+            STORIES BY<br>
+            ALEPH RAMOS
+        </p>
+    </nav>
+
+    <main>
+        <h4 class="animate animate-fade-up">KIMI NO NAWA</h4>
+        <h1 class="animate animate-fade-in">YOUR NAME</h1>
+        <div class="animate animate-left">
+            <hr class="animate animate-fade-up">
+            <p>あなたの名前</p>
+        </div>
+        <p class="animate animate-fade-in">direct by Makoto Shinkai<br>animated by CoMix Wave Films</p>
+    </main>
+
+    <section class="section1">
+        <h1 class="animate animate-fade-in">Movie Synopsis</h1>
+        <div class="all">
+            <div class="movie__texts">
+                <hr class="animate animate-right">
+                <p class="animate animate-fade-up">
+                    Your Name (Kimi no Na wa) is a 2016 Japanese animated film directed by Makoto Shinkai. The story follows two teenagers, Taki, a high school boy living in Tokyo, and Mitsuha, a girl from a rural town, who inexplicably begin to swap bodies intermittently. As they wake up in each other’s lives without understanding why, they must navigate daily tasks, relationships, and the challenges of living in a body not their own. They communicate by leaving notes and messages for each other, gradually growing closer despite never having met in person.
+
+                    Taki and Mitsuha develop a deep bond as they try to uncover the mystery behind their strange connection. However, Taki soon discovers that Mitsuha’s town was destroyed by a comet years earlier, leading to a desperate race against time. He attempts to change fate and prevent the disaster from happening by reconnecting with Mitsuha and saving her and her town.
+                </p>
+                <h4>synopsis written by<br>Aleph Ramos</h4>
+                <hr class="animate animate-right">
+            </div>
+            <div class="movie__img animate animate-right">
+                <img src="img/home.png">
+            </div>
+        </div>
+    </section>
+
+    <div class="dados">
+        <p class="animate animate-fade-in"><b>Aired:</b> August 26, 2016 (Japan)<br><b>Genres:</b> Animation, Drama, Romance, Fantasy<br><b>Duration:</b> 1 hour and 52 minutes (112 minutes)<br><b>Rating:</b> average rating of 8.4/10 on IMDb</p>
+    </div>
+
+    <section class="section__cards">
+        <div class="cards">
+            <div class="card__1 animate animate-left">
+                <p>Mitsuha Miyamizu</p>
+            </div>
+            <div class="card__2 animate animate-fade-in"></div>
+            <div class="card__3 animate animate-right">
+                <p>Taki Tachibana</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="final animate animate-fade-in">
+        <h2>YOUR NAME</h2>
+        <p>Desenvolvido por <a href="#"><b>Aleph Ramos</b></a></p>
+    </section>
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const animateElements = document.querySelectorAll('.animate');
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        } else {
+          entry.target.classList.remove('in-view');
+        }
+      });
+    }, { threshold: 0.1 }); // Ajuste o valor do threshold conforme necessário
+  
+    animateElements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+
+
+</script>
+
+</body>
+</html>
